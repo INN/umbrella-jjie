@@ -1,0 +1,31 @@
+.navbar .navbar-inner {
+  background-color: @green;
+  li > a {
+    color: #fff;
+    &:hover {
+      background-color: @green;
+      .caret::before {
+        border-top-color: #fff;
+      }
+    }
+  }
+  b.caret::before {
+    border-top-color: #fff;
+  }
+  li.dropdown .dropdown-menu li a:hover {
+    color: #fff
+  }
+}
+#secondary-nav {
+  background: @lighttan;
+}
+/*
+ * The Topics Bar is in the "Don't Miss" or "Secondary Nav" position
+ */
+#topics-bar {
+  border-bottom: 0px solid #FFF;
+  ul li {
+    font-size: 13px;
+    font-family: @sans;
+  }
+}

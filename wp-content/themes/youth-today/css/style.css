@@ -1,0 +1,547 @@
+/*
+ * Variables
+ */
+/*
+ * Includes for discrete things
+ */
+/* shim to add a couple extra fontawesome icons, this is a little messy but it works */
+@font-face {
+  font-family: 'yt-fontello';
+  src: url('fonts/fontello/font/fontello.eot?28090272');
+  src: url('fonts/fontello/font/fontello.eot?28090272#iefix') format('embedded-opentype'), url('fonts/fontello/font/fontello.woff?28090272') format('woff'), url('fonts/fontello/ont/fontello.ttf?28090272') format('truetype'), url('fonts/fontello/font/fontello.svg?28090272#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="yt-icon-"]:before,
+[class*=" yt-icon-"]:before {
+  font-family: "yt-fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  margin-left: .2em;
+}
+.yt-icon-book:before {
+  content: '\e80c';
+}
+.yt-icon-list:before {
+  content: '\e80d';
+}
+/*
+ * Styles for youthtoday.org/hub and its child pages
+ *
+ * These styles are broken up into several general groups:
+ *
+ *    1. General
+ *    2. The left-hand side navigation
+ *    3. The right-hand .table-content table of contents
+ *    4. The .wayfinder area
+.hub-logo {
+ padding: .3em;
+}
+
+/*
+ * 1. General
+ */
+.hub-class .table-content .widget.widget_text {
+  background-color: white;
+  margin-bottom: 0;
+  padding: 0;
+}
+.hub-class .widget {
+  margin-top: 0;
+}
+.hub-class .widget_nav_menu div {
+  padding: 0 15px;
+}
+.hub-class p {
+  font-size: 16px;
+}
+.resources .row {
+  display: inline-block;
+  padding: 1.5em 0 1em;
+  border-bottom: 1px solid #DDDDDD;
+}
+select {
+  height: auto;
+}
+/*
+ * 2. Styles for the side nav, some styles shared with .table-content
+ */
+.side-nav-container,
+.table-content .widget {
+  background-color: #F3F0EA;
+  padding-bottom: .1em;
+}
+.side-nav-container {
+  text-align: center;
+}
+.side-nav-container h5 {
+  background-color: #F5EAD3;
+  padding: 1em 0;
+  color: #268301;
+  text-transform: uppercase;
+  font-family: 'Noto sans';
+  font-weight: bold;
+  margin-bottom: 0;
+}
+.side-nav-container + .side-nav-container {
+  margin-top: 2em;
+}
+.side-nav-container ul,
+.table-content ul,
+.table-content .widget ul {
+  margin-left: 0;
+  padding-left: 0;
+}
+.side-nav-container li {
+  list-style: none;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  padding: 0;
+  margin: 0.5em 0;
+}
+.side-nav-container li a,
+.side-nav-container li.active a,
+.side-nav-container li a:hover,
+.side-nav-container li a.inactive:hover {
+  color: #268301;
+  text-decoration: none;
+}
+@media (max-width: 768px) {
+  .side-nav-container li,
+  .side-nav-container h5 {
+    font-size: 16px;
+  }
+}
+.side-nav-container .menu-item-has-children li {
+  font-weight: normal;
+}
+.side-nav-container .sub-menu {
+  text-align: left;
+}
+.side-nav-container .sub-menu > li {
+  list-style: disc inside none;
+  padding-right: 0;
+  padding-left: 5px;
+  color: #268301;
+  font-size: 1.0rem;
+}
+.side-nav-container .sub-menu > li li {
+  padding-left: 10px;
+}
+.side-nav-container.top li {
+  padding: 0.5em 0.5em 0;
+}
+.side-nav-container.bottom ul li a {
+  text-transform: uppercase;
+  font-size: 16px;
+  display: block;
+  background-color: #F5EAD3;
+  padding: 1em 0.5em;
+}
+.side-nav-container .sub-menu li {
+  list-style: none none outside;
+}
+.side-nav-container.bottom .sub-menu li a {
+  font-size: 14px;
+  text-transform: none;
+  color: #1e7201;
+  text-decoration: underline;
+  background: none;
+  padding: 0 0.5em;
+}
+.side-nav-container .current-page-ancestor a {
+  color: #268301;
+}
+@media (max-width: 768px) {
+  .hub-main .span2,
+  .hub-main .span7,
+  .hub-main .span3 {
+    width: 100%;
+    margin: 0;
+  }
+}
+/*
+ * 3. Styles for the right-hand table of contents sidebar
+ */
+widget_nav_menu > div > ul.menu {
+  padding: 0 15px;
+}
+.table-content {
+  text-align: left;
+}
+.table-content nav {
+  padding: 0 15px;
+}
+.table-content .widget {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.table-content > aside.widget {
+  padding: 0;
+  padding-bottom: 15px;
+  border-radius: 0;
+}
+.table-content h3.widget-title,
+.table-content h3.widgettitle {
+  background-color: #F5EAD3;
+  border: none;
+  padding: 1em 0;
+  color: #444444;
+  text-transform: none;
+  font-family: 'Noto Sans', Arial, sans-serif;
+  font-weight: bold;
+  font-size: 1.3em;
+  text-align: center;
+  text-shadow: none;
+  margin-left: 0;
+  margin-top: 0;
+  width: 100%;
+}
+.table-content li,
+.table-content .widget li {
+  list-style: none;
+  line-height: 1.4;
+  margin-top: 1.2em;
+  margin-left: 15px;
+  border-bottom-style: none;
+  padding-bottom: 0;
+}
+.table-content li a {
+  color: #268301;
+  text-decoration: underline;
+}
+.table-content li a:hover {
+  color: #268301;
+  text-decoration: underline;
+}
+.table-content .menu-item-has-children,
+.table-content .widget .menu-item-has-children {
+  margin-left: 0;
+}
+.table-content .menu > .menu-item-has-children > a {
+  font-weight: 700;
+  color: #000000;
+  text-decoration: none;
+}
+.table-content ul.sub-menu li a {
+  font-weight: 400;
+}
+/*
+ * 4. Styles for the .wayfinder breadcrumbs area
+ */
+.wayfinder {
+  margin-bottom: 1.2em;
+}
+li.top-level,
+li.second-level {
+  list-style: none;
+  display: inline-block;
+}
+@media (max-width: 768px) {
+  li.top-level,
+  li.second-level {
+    display: block;
+  }
+  li.top-level {
+    margin-bottom: 0px;
+  }
+  .wayfinder br {
+    display: none;
+  }
+}
+.wayfinder li.top-level a,
+.wayfinder li.second-level a {
+  display: block;
+  color: #90c740;
+  background-color: #1e7201;
+  text-align: center;
+  padding: .7em 2em;
+  text-decoration: uppercase;
+  margin-bottom: 2px;
+}
+.wayfinder li.second-level a {
+  background-color: #f5ead3;
+  color: #1e7201;
+}
+li.top-level a {
+  text-transform: uppercase;
+  font-family: 'Noto sans';
+  font-weight: bold;
+  font-size: 1.2em;
+}
+li.second-level a {
+  color: #1e7201;
+  background-color: #f5ead3;
+}
+li.top-level a:hover {
+  text-decoration: none;
+  background-color: #1A6300;
+}
+li.second-level a:hover {
+  text-decoration: none;
+  background-color: #E6DBC4;
+}
+/*
+ * Ads
+ */
+.ad-728 {
+  float: right;
+  width: 728px;
+  margin-top: 28px;
+}
+.ad-728 .widget {
+  margin: 0;
+}
+.widget.acm_ad_zones {
+  background-color: transparent;
+}
+.widget_doubleclick_widget {
+  text-align: center;
+}
+.widget,
+#sidebar .widget {
+  padding: 10px;
+  margin-bottom: 12px;
+  background-color: #ffffff;
+}
+.widget + .widget,
+#sidebar .widget + .widget {
+  border-top: none;
+}
+#header-ad-zone-container .widget {
+  margin-bottom: 0;
+  margin-top: 18px;
+}
+.widget_sp_image img {
+  max-width: 100% !important;
+}
+.tags ul {
+  margin: 0;
+}
+.tags li {
+  display: inline;
+  list-style: none;
+  line-height: 2;
+  padding-right: 10px;
+}
+.widget_nav_menu > div > ul.menu li.current-menu-item a:link {
+  color: #1e7201;
+  text-decoration: underline;
+}
+.widget_nav_menu > div > ul.menu li.current-menu-item a,
+li.current-menu-item a li {
+  color: #1e7201;
+  text-decoration: none;
+}
+.navbar .navbar-inner {
+  background-color: #268301;
+}
+.navbar .navbar-inner li > a {
+  color: #fff;
+}
+.navbar .navbar-inner li > a:hover {
+  background-color: #268301;
+}
+.navbar .navbar-inner li > a:hover .caret::before {
+  border-top-color: #fff;
+}
+.navbar .navbar-inner b.caret::before {
+  border-top-color: #fff;
+}
+.navbar .navbar-inner li.dropdown .dropdown-menu li a:hover {
+  color: #ffffff;
+}
+#secondary-nav {
+  background: #f5ead3;
+}
+/*
+ * The Topics Bar is in the "Don't Miss" or "Secondary Nav" position
+ */
+#topics-bar {
+  border-bottom: 0px solid #FFF;
+}
+#topics-bar ul li {
+  font-size: 13px;
+  font-family: 'Noto Sans', Arial, sans-serif;
+}
+#alert-container {
+  color: #222;
+}
+div#homepage-featured {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+#homepage-featured .sub-stories .story p {
+  font-size: 13px;
+}
+#homepage-featured .top-story.span8 p {
+  font-size: 15px;
+}
+#homepage-featured.row-fluid {
+  border-radius: 0;
+}
+#homepage-bottom p {
+  font-size: 15px;
+}
+#homepage-featured .sub-stories .story:last-child {
+  border-bottom: none;
+  margin-bottom: none;
+}
+#homepage-bottom .largo-recent-posts li + li {
+  margin-top: 20px;
+}
+.home #header-ad-zone-container {
+  float: right;
+  height: 134px;
+  display: table-cell;
+  vertical-align: middle;
+}
+.home #header-ad-zone-container aside {
+  padding-right: 0;
+  display: inline;
+}
+@media (max-width: 1200px) {
+  .home .header-ad-zone #header-ad-zone-container {
+    display: none;
+  }
+}
+.home #content > .widget {
+  padding-bottom: 34px;
+  border-bottom: 5px solid #dddddd;
+}
+/* Now you can add any of your custom styles below this line */
+html,
+body {
+  font-family: 'Noto Sans', Arial, sans-serif;
+}
+/* Some coloration of the page, to match jjie. See also widgets.less */
+body {
+  background: #efefef url('bg.png');
+}
+body.hub-class {
+  background: none;
+}
+#page {
+  background: transparent;
+}
+#content {
+  background: #ffffff;
+  padding: 2%;
+}
+body .primary-featured-post,
+body .secondary-featured-post {
+  background-color: #ffffff;
+}
+::selection,
+::-moz-selection {
+  background: #EDDEBB;
+  /* Firefox */
+}
+/*
+ * Heading colors and sizes
+ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: "Noto Sans", "Lato", Arial, sans-serif;
+}
+h1 {
+  color: #191919;
+}
+h2 {
+  color: #115301;
+}
+h3 {
+  color: #115301;
+}
+h4 {
+  font-family: "PT Serif", Georgia, Times New Roman, serif;
+  color: #115301;
+}
+h5 {
+  font-family: "PT Serif", Georgia, Times New Roman, serif;
+  color: #333;
+}
+h6 {
+  font-family: "PT Serif", Georgia, Times New Roman, serif;
+  color: #d5c298;
+}
+/*
+ * General typographic things
+ */
+a {
+  color: #268301;
+}
+#site-footer a:hover,
+a:hover {
+  color: #90c740;
+}
+p {
+  font-family: "PT Serif", Georgia, Times New Roman, serif;
+}
+.alignnone {
+  margin: 0 18px 0 0;
+}
+.entry-content a {
+  font-weight: bold;
+}
+.intro {
+  font-size: 1.1em;
+}
+/* largo interactive stylings */
+.largo-interactive-quiz {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  background: #f5f5f5;
+  border-radius: 3px;
+  position: relative;
+}
+.largo-interactive-quiz .largo-interactive-header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+.largo-interactive-quiz .largo-interactive-headline,
+.largo-interactive-quiz .largo-interactive-lede {
+  margin-bottom: 12px;
+}
+.largo-interactive-quiz .quiz_container h1 {
+  font-size: 1em;
+}
+.largo-interactive-quiz .how_you_did {
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  padding: 1em 0;
+  font-weight: bold;
+  display: block;
+}
+.primary-featured-post,
+.secondary-featured-post,
+.archive-background {
+  padding: 20px 20px 32px;
+  border-bottom: none;
+  background-color: #fff;
+}
+.primary-featured-post,
+.archive-background {
+  margin-bottom: 0;
+}
+#site-footer .widgettitle a {
+  color: #fff;
+}

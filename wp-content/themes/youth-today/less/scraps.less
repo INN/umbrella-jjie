@@ -1,0 +1,115 @@
+/*
+ * Do not include this file.
+ *
+ * This is a collection of things that have been removed, but the client seems likely to want.
+ */
+
+// Recent posts widget
+h3.recent-posts {
+  font-family: "PT Serif", Georgia, Times New Roman, serif;
+  padding: 10px 0;
+  font-size: 29px;
+  font-style: italic;
+  color: #AAA;
+  border-bottom: 1px solid #999;
+  border-top: 5px solid #F1F1F1;
+}
+
+// Widgets in general
+
+.widgettitle, .stories h3.widgettitle {
+  padding: 7px 10px;
+  border: 0px solid #ddd;
+  background-color: #ddd;
+  font-size: 14.04px;
+  text-shadow: 1px 1px 2px #777;
+  border-left: 7px solid #115301;
+  margin-left: -13px;
+}
+h3.widgettitle {
+  margin-top:-27px;
+  position: relative;
+  width: 75%;
+  border-radius: 0;
+  margin-left: -12px;
+}
+h3.widgettitle:after {
+  left: 100%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+#sidebar h3.widgettitle:after {
+  border-color: rgba(221, 221, 221, 0);
+  border-left-color: #ddd;
+  border-width: 14px;
+  top: 50%;
+  margin-top: -14px;
+}
+
+// Widgets on the homepage bottom
+#homepage-bottom .widgettitle {
+  margin: 0 0 8px;
+  padding: 0 0 5px;
+  font-size: 16.04px;
+  background: 0;
+  color: #444;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+  text-shadow: 0px 0px;
+  width: 100%;
+}
+#homepage-bottom h3.widgettitle:after {
+  border-color: rgba(221, 221, 221, 0);
+  border-left-color: #fff;
+  border-width: 0px;
+  top: 0;
+  margin-top: 0px;
+}
+
+// .topics class, which doesn't appear to be used on the site
+
+.topics {
+  text-align: center;
+}
+.topics h3 {
+  font-weight: 700;
+  font-size: 1.5em;
+}
+.topics p {
+  font-size: 1em;
+  line-height: 1.2;
+}
+.topics h5 {
+  font-family: 'Noto Sans', Arial, sans-serif;
+  color: #999999;
+  font-size: 1em;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+.topics ul li {
+  font-family: "PT Serif", Georgia, Times New Roman, serif;
+}
+
+// .resources class, which again doesn't appear to be used on the site
+
+.resources .row {
+	display: inline-block;
+	padding: 1.5em 0 1em;
+	border-bottom: 1px solid #DDDDDD;
+}
+.resources h2 {
+	font-size: 1.5em;
+	color: #555555;
+}
+.resources h3 {
+	font-weight: 700;
+	font-size: 1.3em;
+	margin: 10px 0;
+}
+.resources p {
+	font-size: .9em;
+}

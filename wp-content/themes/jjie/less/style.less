@@ -1,0 +1,284 @@
+/* Largo essentials */
+@import "ads.less";
+@import "reset.less";
+@import "variables.less";
+@import "mixins.less";
+
+/* JJIE custom nav variables */
+// Main navbar
+@navbarBackground: #333;
+@navbarText: @white;
+@navbarLinkColor: @navbarText;
+
+@stickyNavbarText: @textColor;
+@stickyNavbarLinkColor: @stickyNavbarText;
+@stickyNavbarLinkColorHover: @white;
+
+/* Largo nav styles */
+@import "navbar-common.less";
+@import "navbar-sticky.less";
+
+/* Everything else */
+@import url('//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic');
+
+@red: #9c0001;
+a {
+  color: @red;
+  &:hover {
+    color: lighten(@red,10%);
+    text-decoration: underline;
+  }
+}
+body {
+  margin: 0;
+  font-family: "Lora", Georgia, "Times New Roman", Times, serif;
+  font-size: 17px;
+  line-height: 26px;
+  color: #333;
+  background: #f6f6f6 url('/files/2013/02/bg.png');
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lora", Georgia, "Times New Roman", Times, serif;
+}
+
+#main-nav {
+  li.dropdown {
+    .dropdown-menu a {
+      color: @textColor;
+
+      &:hover {
+        color: @white;
+      }
+    }
+  }
+}
+
+#page {
+  background: #f6f6f6 url('/files/2013/02/bg.png');
+}
+#content {
+  background-color: #fdfdfd;
+  padding: 2%;
+}
+#site-header img {
+  margin: 22px 0 20px;
+}
+#homepage-featured {
+  border: none !important;
+}
+.sticky-related,
+.sticky-solo {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 24px;
+  a {
+    color: #333;
+  }
+}
+.sticky-main-feature {
+  h2 a,
+  p {
+    color: #333;
+  }
+}
+#sidebar .widget,
+.widget {
+  background-color: #FAFAFA;
+  padding: 10px;
+  margin-bottom: 12px;
+}
+.widget + .widget {
+  border-top: none;
+}
+.widgettitle {
+  background-color: @red;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: normal;
+  padding: 10px;
+  font-size: 14px;
+}
+.widget.no-bg .widgettitle,
+.widgettitle,
+.widgettitle a {
+  color: #fff;
+}
+.widget.rev {
+  color: #fff;
+  background-color: #999;
+  padding-bottom: 0px;
+  .widgettitle {
+    color: @red;
+  }
+}
+
+#site-footer {
+  a:hover {
+    color: #830001;
+  }
+  ul li a {
+    color: #fff;
+  }
+}
+
+/*-- Hub Styling --*/
+.coming-soon {
+  font-style: italic;
+  a {
+    color: #999;
+    &:hover {
+      text-decoration: none;
+      color: #999;
+    }
+  }
+}
+.billboard {
+  float: right;
+  padding: 10px 0;
+}
+.breadcrumbs {
+  font-size: .7em;
+  padding: 0 0 0 5px;
+  margin: 0 0 22px;
+  background: #eee;
+  font-weight: bold;
+  font-family: Helvetica, Arial, sans-serif;
+  a {
+    font-weight: normal;
+  }
+}
+#post-103871 > .entry-header > .entry-title {
+  display: none;
+}
+.tabby {
+  margin-bottom: 15px;
+  .content {
+    background: #F2F2F2;
+    padding: 10px;
+    display: none;
+  }
+  h5 {
+    cursor: pointer;
+    border-radius: 10px 0 0;
+    margin: 0;
+    padding: 10px;
+    background: #ddd;
+    color: #164266;
+  }
+}
+body.hub {
+  background: #ccc url('/files/2013/02/hub-bg.png');
+}
+.hub {
+  a {
+    color: #1e537f;
+    text-decoration: none;
+    &:hover {
+      color: #2F6591;
+      text-decoration: underline;
+    }
+  }
+  .widgettitle a {
+    color: #fff;
+    &:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+  }
+  .breadcrumbs {
+    background: #2F6591;
+    color: #D3DFEA;
+    padding-left: 1em;
+    a {
+      color: #D3DFEA;
+      &:hover {
+        color: #fff;
+      }
+    }
+    span:last-child{
+       color: #fff;
+    }
+  }
+  li.hub {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  .widgettitle {
+    background-color: #1e537f;
+  }
+  .widget.rev .widgettitle {
+    background-color: #fff;
+    color: #1e537f;
+  }
+  .donate-btn a {
+    color: #FFF;
+  }
+}
+
+/* Row Formatting CSS for YT-32 */
+.resources {
+  .row {
+    display: inline-block;
+    padding: 1.5em 0 1em;
+    border-bottom: 1px solid #DDD;
+  }
+  h2 {
+    font-size: 1.5em;
+    color: #555;
+  }
+  h3 {
+    font-weight: 700;
+    font-size: 1.3em;
+    margin: 10px 0;
+  }
+  p {
+    font-size: .9em;
+  }
+}
+
+.primary-featured-post,
+.secondary-featured-post,
+.archive-background {
+  padding: 20px 20px 32px;
+  border-bottom: none;
+  background-color: #fff;
+}
+.primary-featured-post,
+.archive-background {
+  margin-bottom: 0;
+}
+
+/*
+ * CSS-based hack to get internal links on pages to have some padding between the link and the top of the page.
+ * 
+ */
+// For all anchor elements with a name attribute inside the post entry content, which is how jump links are normally handled
+.entry-content a[name]::before,
+.entry-content a[id]::before,
+// For all anchor elements with a name attribute inside .tabby, which are used for backreferences from the footnotes
+.tabby a[name]::before,
+.tabby a[id]::before,
+// for footnotes, which use <sup><a> tags
+sup a::before {
+  display: inline-block;
+  content: " ";
+  margin-top: -100px;
+  height: 100px;
+  visibility: hidden;
+  float: left;
+}
+
+/**
+ * Fix for YT-57
+ */
+.largo-tag-list {
+  li {
+    display: inline-block;
+    margin-right: 1em;
+  }
+}

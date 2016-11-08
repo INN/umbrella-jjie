@@ -1,0 +1,265 @@
+/*
+ * Styles for youthtoday.org/hub and its child pages
+ *
+ * These styles are broken up into several general groups:
+ *
+ *    1. General
+ *    2. The left-hand side navigation
+ *    3. The right-hand .table-content table of contents
+ *    4. The .wayfinder area
+.hub-logo {
+ padding: .3em;
+}
+
+/*
+ * 1. General
+ */
+
+.hub-class .table-content .widget.widget_text {
+  background-color: white;
+  margin-bottom: 0;
+  padding: 0;
+}
+.hub-class .widget {
+  margin-top: 0;
+}
+.hub-class .widget_nav_menu div {
+  padding: 0 15px;
+}
+// making this smaller for YT-28; default size in comiled form is 19.552px;
+.hub-class p {
+  font-size: 16px;
+}
+// Re-adding the border-bottom that Largo removed, for YT-28
+.resources .row {
+  display: inline-block;
+  padding: 1.5em 0 1em;
+  border-bottom: 1px solid #DDDDDD;
+}
+// In Firefox, element text is too tall for the containing input, YT-28
+select {
+  height: auto;
+}
+
+/*
+ * 2. Styles for the side nav, some styles shared with .table-content
+ */
+
+.side-nav-container, .table-content .widget {
+  background-color: #F3F0EA;
+  padding-bottom: .1em;
+}
+.side-nav-container {
+  text-align: center;
+}
+.side-nav-container h5 {
+  background-color: #F5EAD3;
+  padding: 1em 0;
+  color: @green;
+  text-transform: uppercase;
+  font-family: 'Noto sans';
+  font-weight: bold;
+  margin-bottom: 0;
+}
+.side-nav-container + .side-nav-container {
+  margin-top: 2em;
+}
+.side-nav-container ul,
+.table-content ul,
+.table-content .widget ul {
+  margin-left: 0;
+  padding-left: 0;
+}
+.side-nav-container li {
+  list-style: none;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  padding: 0;
+  margin: 0.5em 0;
+  a,
+  &.active a,
+  a:hover,
+  a.inactive:hover {
+    color: @green;
+    text-decoration: none;
+  }
+}
+@media (max-width: 768px) {
+  .side-nav-container li,
+  .side-nav-container h5 {
+    font-size: 16px;
+  }
+}
+.side-nav-container .menu-item-has-children li {
+  font-weight: normal;
+}
+.side-nav-container .sub-menu {
+  text-align: left;
+}
+.side-nav-container .sub-menu>li {
+  list-style: disc inside none;
+  padding-right: 0;
+  padding-left: 5px;
+  color: @green;
+  font-size: 1.0rem;
+}
+.side-nav-container .sub-menu>li li {
+  padding-left: 10px;
+}
+.side-nav-container.top li {
+  padding: 0.5em 0.5em 0;
+}
+.side-nav-container.bottom ul li a {
+  text-transform: uppercase;
+  font-size: 16px;
+  display: block;
+  background-color: #F5EAD3;
+  padding: 1em 0.5em;
+}
+.side-nav-container .sub-menu li {
+  list-style: none none outside;
+}
+.side-nav-container.bottom .sub-menu li a {
+  font-size: 14px;
+  text-transform: none;
+  color: #1e7201;
+  text-decoration: underline;
+  background: none;
+  padding: 0 0.5em;
+}
+.side-nav-container .current-page-ancestor a {
+  color: @green;
+}
+@media (max-width: 768px) {
+  .hub-main .span2,
+  .hub-main .span7,
+  .hub-main .span3 {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+/*
+ * 3. Styles for the right-hand table of contents sidebar
+ */
+widget_nav_menu>div>ul.menu {
+  padding: 0 15px;
+}
+.table-content {
+  text-align: left;
+  nav {
+    padding: 0 15px;
+  }
+  .widget {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+.table-content>aside.widget{
+  padding: 0;
+  padding-bottom: 15px;
+  border-radius: 0;
+}
+.table-content h3.widget-title,
+.table-content h3.widgettitle {
+  background-color: #F5EAD3;
+  border: none;
+  padding: 1em 0;
+  color: #444444;
+  text-transform: none;
+  font-family: @sans;
+  font-weight: bold;
+  font-size: 1.3em;
+  text-align: center;
+  text-shadow: none;
+  margin-left: 0;
+  margin-top: 0;
+  width: 100%;
+}
+.table-content li,
+.table-content .widget li {
+  list-style: none;
+  line-height: 1.4;
+  margin-top: 1.2em;
+  margin-left: 15px;
+  border-bottom-style: none;
+  padding-bottom: 0;
+}
+.table-content li {
+  a {
+    color: @green;
+    text-decoration: underline;
+    &:hover {
+      color: @green;
+      text-decoration: underline;
+    }
+  }
+}
+.table-content .menu-item-has-children,
+.table-content .widget .menu-item-has-children {
+  margin-left: 0;
+}
+.table-content .menu>.menu-item-has-children>a {
+  font-weight: 700;
+  color: #000000;
+  text-decoration: none;
+}
+.table-content ul.sub-menu li a {
+  font-weight: 400;
+}
+
+/*
+ * 4. Styles for the .wayfinder breadcrumbs area
+ */
+.wayfinder {
+  margin-bottom: 1.2em;
+}
+li.top-level, li.second-level {
+  list-style: none;
+  display: inline-block;
+}
+@media (max-width: 768px) {
+li.top-level, li.second-level {
+  display: block;
+}
+li.top-level {
+  margin-bottom: 0px;
+}
+.wayfinder br {
+  display: none;
+}
+}
+.wayfinder li.top-level a,
+.wayfinder li.second-level a {
+  display: block;
+  color: @lightgreen;
+  background-color: #1e7201;
+  text-align: center;
+  padding:.7em 2em;
+  text-decoration: uppercase;
+  margin-bottom: 2px;
+}
+.wayfinder li.second-level a {
+  background-color: #f5ead3;
+  color: #1e7201;
+}
+li.top-level a {
+  text-transform: uppercase;
+  font-family: 'Noto sans';
+  font-weight: bold;
+  font-size:1.2em;
+}
+li.second-level a {
+  color: #1e7201;
+  background-color: @lighttan;
+  }
+li.top-level a:hover {
+  text-decoration: none;
+  background-color: #1A6300;
+}
+li.second-level a:hover {
+  text-decoration: none;
+  background-color:#E6DBC4;
+}
+

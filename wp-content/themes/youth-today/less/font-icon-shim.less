@@ -1,0 +1,28 @@
+/* shim to add a couple extra fontawesome icons, this is a little messy but it works */
+@font-face {
+  font-family: 'yt-fontello';
+  src: url('fonts/fontello/font/fontello.eot?28090272');
+  src: url('fonts/fontello/font/fontello.eot?28090272#iefix') format('embedded-opentype'),
+       url('fonts/fontello/font/fontello.woff?28090272') format('woff'),
+       url('fonts/fontello/ont/fontello.ttf?28090272') format('truetype'),
+       url('fonts/fontello/font/fontello.svg?28090272#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+ [class^="yt-icon-"]:before, [class*=" yt-icon-"]:before {
+  font-family: "yt-fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  margin-left: .2em;
+}
+.yt-icon-book:before { content: '\e80c'; }
+.yt-icon-list:before { content: '\e80d'; }

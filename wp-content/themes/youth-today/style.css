@@ -1,0 +1,15 @@
+/*
+Theme Name:     Youth Today
+Theme URI:      http://largoproject.org
+Description:    A child theme for Youth Today based on the Project Largo parent theme.
+Author:         Matthew Russo/Blast Brand
+Author URI:     http://blastbrand.com
+Template:       largo-dev
+Version:        0.2.0
+*/
+
+
+/* ...and finally some fonts from the Google Font library. */
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic);
+
+@import url("css/style.css");

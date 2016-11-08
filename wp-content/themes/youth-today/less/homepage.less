@@ -1,0 +1,60 @@
+// correct color for homepage alert
+#alert-container {
+  color: #222;
+}
+
+// Remove borders, but not the bottom
+div#homepage-featured {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  // border-bottom: none; // not removing this because it's used to draw a nice line between featured and not. 
+}
+// Making this bigger per YT-28; largo default is 10.67px
+#homepage-featured .sub-stories .story p {
+  font-size: 13px;
+}
+// Making this bigger per YT-28; largo devfault is 13.04px
+#homepage-featured .top-story.span8 p {
+  font-size: 15px;
+}
+// Removing border rounding for YT-28; largo default is 8px;
+#homepage-featured.row-fluid {
+  border-radius: 0;
+}
+
+// To match the top story, decreasing from Largo's 16px;
+#homepage-bottom p {
+  font-size: 15px;
+}
+
+#homepage-featured .sub-stories .story:last-child {
+  border-bottom: none;
+  margin-bottom: none;
+}
+
+// Increasing vertical spacing between stories on homepage
+#homepage-bottom .largo-recent-posts li+li {
+  margin-top: 20px;
+}
+.home #header-ad-zone-container {
+  float: right;
+  height: 134px; // Height of current homepage image, plus its 5px top+bottom margin.
+  display: table-cell;
+  vertical-align: middle;
+  aside {
+    padding-right: 0;
+    display: inline;
+  }
+}
+@media (max-width: 1200px) {
+  .home .header-ad-zone #header-ad-zone-container {
+    display: none;
+  }
+}
+
+// add a border-bottom to the widget to match the homepage featured template's border-bottom  http://jira.inn.org/browse/YT-93
+.home #content > .widget {
+  padding-bottom: 10px + 24px;
+  border-bottom: 5px solid #dddddd;
+}

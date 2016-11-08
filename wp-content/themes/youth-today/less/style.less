@@ -1,0 +1,145 @@
+/*
+ * Variables
+ */
+@sans: 'Noto Sans', Arial, sans-serif;
+@serif: "PT Serif", Georgia, Times New Roman, serif;
+
+@green: #268301;
+@darkgreen: #115301;
+@lightgreen: #90C740; // More of a lime right now
+@tan: #D5C298;
+@lighttan: #F5EAD3;
+
+/*
+ * Includes for discrete things
+ */
+@import 'font-icon-shim.less';
+@import 'hub.less';
+@import 'ads.less';
+@import 'widgets.less';
+@import 'nav.less';
+@import 'homepage.less';
+
+/* Now you can add any of your custom styles below this line */
+html, body {
+  font-family: @sans;
+}
+
+/* Some coloration of the page, to match jjie. See also widgets.less */
+body {
+  background: #efefef url('bg.png');
+}
+body.hub-class {
+  background: none;
+}
+#page {
+  background: transparent;
+}
+#content {
+  background: #ffffff;
+  padding: 2%;
+}
+body .primary-featured-post,
+body .secondary-featured-post {
+  background-color: #ffffff;
+}
+
+::selection,
+::-moz-selection {
+  background: #EDDEBB; /* Firefox */
+}
+
+/*
+ * Heading colors and sizes
+ */
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: "Noto Sans", "Lato",Arial,sans-serif;
+}
+h1 {
+ color: #191919;
+}
+h2 {
+  color: @darkgreen;
+}
+h3 {
+  color: @darkgreen;
+}
+h4 {
+  font-family: @serif;
+  color: @darkgreen;
+}
+h5 {
+  font-family: @serif;
+  color: #333;
+}
+h6 {
+  font-family: @serif;
+  color: @tan;
+}
+
+/*
+ * General typographic things
+ */
+a {
+  color: @green;
+}
+#site-footer a:hover,
+a:hover {
+  color: @lightgreen;
+}
+p {
+  font-family: @serif;
+}
+.alignnone {
+  margin: 0 18px 0 0;
+}
+
+.entry-content a {
+  font-weight: bold;
+}
+.intro{
+  font-size: 1.1em;
+}
+
+/* largo interactive stylings */
+
+.largo-interactive-quiz {
+  border: 1px solid rgba(0,0,0,0.15);
+  background: #f5f5f5;
+  border-radius: 3px;
+  position: relative;
+}
+
+.largo-interactive-quiz .largo-interactive-header {
+  border-bottom: 1px solid rgba(0,0,0,0.15);
+}
+
+.largo-interactive-quiz .largo-interactive-headline , .largo-interactive-quiz .largo-interactive-lede{
+  margin-bottom: 12px;
+}
+
+.largo-interactive-quiz .quiz_container h1 {
+  font-size: 1em;
+}
+
+.largo-interactive-quiz .how_you_did {
+  border-top: 1px solid rgba(0,0,0,0.15);
+  padding: 1em 0;
+  font-weight: bold;
+  display: block;
+}
+.primary-featured-post,
+.secondary-featured-post,
+.archive-background {
+  padding: 20px 20px 32px;
+  border-bottom: none;
+  background-color: #fff;
+}
+.primary-featured-post,
+.archive-background {
+  margin-bottom: 0;
+}
+#site-footer .widgettitle a {
+    color: #fff;
+}
