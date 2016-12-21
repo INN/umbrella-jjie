@@ -25,13 +25,14 @@
 .home #content > .widget img {
   max-width: 100%;
 }
-.home #header-ad-zone-container {
+#header-ad-zone-container {
   float: right;
   height: 103px;
   display: table-cell;
   vertical-align: middle;
+  width: auto;
 }
-.home #header-ad-zone-container aside {
+#header-ad-zone-container aside {
   padding-right: 0;
   display: inline;
 }
@@ -132,43 +133,6 @@ textarea {
   overflow: auto;
   vertical-align: top;
 }
-.clearfix {
-  *zoom: 1;
-}
-.clearfix:before,
-.clearfix:after {
-  display: table;
-  content: "";
-}
-.clearfix:after {
-  clear: both;
-}
-.visuallyhidden {
-  position: absolute;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  width: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
-}
-.hide-text {
-  font: 0/0 a;
-  color: transparent;
-  text-shadow: none;
-  background-color: transparent;
-  border: 0;
-}
-.input-block-level {
-  display: block;
-  width: 100%;
-  min-height: 28px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
-}
 /**
  * @group Color
  * @label Base Color (used for navbar, widget titles, etc.)
@@ -258,6 +222,43 @@ textarea {
  * @type text
  * @default_value 1.5
  */
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+}
+.clearfix:after {
+  clear: both;
+}
+.visuallyhidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+.hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 28px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
 /* JJIE custom nav variables */
 /* Largo nav styles */
 html.nav-open,
@@ -737,10 +738,8 @@ body.admin-bar .sticky-nav-holder {
   .sticky-nav-holder {
     display: none;
   }
-  body.single .sticky-nav-holder.sticky_nav_display_article,
-  body.single .sticky-nav-holder.main_nav_hide_article,
-  body.page .sticky-nav-holder.sticky_nav_display_article,
-  body.page .sticky-nav-holder.main_nav_hide_article {
+  body .sticky-nav-holder.main_nav_hide_article,
+  body .sticky-nav-holder.sticky_nav_display {
     display: block;
   }
 }
