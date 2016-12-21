@@ -308,6 +308,22 @@ li.second-level a:hover {
 .widget_doubleclick_widget {
   text-align: center;
 }
+#header-ad-zone-container {
+  width: auto;
+  float: right;
+  height: 134px;
+  display: table-cell;
+  vertical-align: middle;
+}
+#header-ad-zone-container aside {
+  padding-right: 0;
+  display: inline;
+}
+@media (max-width: 1200px) {
+  .header-ad-zone #header-ad-zone-container {
+    display: none;
+  }
+}
 .widget,
 #sidebar .widget {
   padding: 10px;
@@ -400,21 +416,6 @@ div#homepage-featured {
 }
 #homepage-bottom .largo-recent-posts li + li {
   margin-top: 20px;
-}
-.home #header-ad-zone-container {
-  float: right;
-  height: 134px;
-  display: table-cell;
-  vertical-align: middle;
-}
-.home #header-ad-zone-container aside {
-  padding-right: 0;
-  display: inline;
-}
-@media (max-width: 1200px) {
-  .home .header-ad-zone #header-ad-zone-container {
-    display: none;
-  }
 }
 .home #content > .widget {
   padding-bottom: 34px;
