@@ -10,7 +10,7 @@ module.exports = function(grunt) {
         less: {
             development: {
                 options: {
-                    paths: ['less', '../largo-dev/less/inc']
+                    paths: ['less', '../largo/less/inc']
                 },
                 files: {
                     'css/style.css': 'less/style.less',
