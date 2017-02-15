@@ -24,13 +24,14 @@
 .home #content > .widget img {
   max-width: 100%;
 }
-.home #header-ad-zone-container {
+#header-ad-zone-container {
   float: right;
   height: 103px;
   display: table-cell;
   vertical-align: middle;
+  width: auto;
 }
-.home #header-ad-zone-container aside {
+#header-ad-zone-container aside {
   padding-right: 0;
   display: inline;
 }

@@ -16,6 +16,24 @@
   text-align: center;
 }
 
+#header-ad-zone-container {
+  width: auto;
+  float: right;
+  height: 134px; // Height of current homepage image, plus its 5px top+bottom margin.
+  display: table-cell;
+  vertical-align: middle;
+  aside {
+    padding-right: 0;
+    display: inline;
+  }
+}
+@media (max-width: 1200px) {
+  .header-ad-zone #header-ad-zone-container {
+    display: none;
+  }
+}
+
+// copy this from Largo
 @tabletDown:  ~"only screen and (max-width: 979px)";
 #homepage-triple-widget {
   @media @tabletDown {
