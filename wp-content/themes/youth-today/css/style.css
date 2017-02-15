@@ -308,6 +308,15 @@ li.second-level a:hover {
 .widget_doubleclick_widget {
   text-align: center;
 }
+@media only screen and (max-width: 529px) {
+  #homepage-triple-widget .span4 {
+    margin: 0 auto 12px;
+    clear: both;
+    padding: 0;
+    width: 300px;
+    float: none;
+  }
+}
 .widget,
 #sidebar .widget {
   padding: 10px;
