@@ -38,7 +38,7 @@ def staging():
     """
     env.settings    = 'staging'
     env.hosts       = [ os.environ[ 'JJIE_STAGING_SFTP_HOST' ], ]   # ssh host for production.
-    env.user        = os.environ[ 'JJIE_STAGING_SFTP_USER' ],       # ssh user for production.
+    env.user        = os.environ[ 'JJIE_STAGING_SFTP_USER' ]        # ssh user for production.
     env.password    = os.environ[ 'JJIE_STAGING_SFTP_PASSWORD' ]    # ssh password for production.
     env.domain      = 'jjie.staging.wpengine.com'
     env.port        = '2222'
