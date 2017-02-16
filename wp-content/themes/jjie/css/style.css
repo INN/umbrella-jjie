@@ -1,5 +1,4 @@
 @import url('//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic');
-/* Largo essentials */
 /*
  * Ads
  */
@@ -36,6 +35,16 @@
   padding-right: 0;
   display: inline;
 }
+@media only screen and (max-width: 979px) {
+  #homepage-triple-widget .span4 {
+    margin: 0 auto 12px;
+    clear: both;
+    padding: 0;
+    width: 300px;
+    float: none;
+  }
+}
+/* Largo essentials */
 article,
 aside,
 details,
