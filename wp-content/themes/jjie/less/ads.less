@@ -50,6 +50,12 @@
     padding-bottom: 24px;
     border-top: @border;
     border-bottom: @border;
+
+    // if there is a sticky post above this, avoid double border
+    article + & {
+      border-top: none;
+      padding-top: 0;
+    }
   }
 
   @media @tabletDown {

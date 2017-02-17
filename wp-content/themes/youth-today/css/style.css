@@ -335,6 +335,10 @@ li.second-level a:hover {
     border-top: 1px dotted #aaaaaa;
     border-bottom: 1px dotted #aaaaaa;
   }
+  article + #homepage-triple-widget {
+    border-top: none;
+    padding-top: 0;
+  }
 }
 @media only screen and (max-width: 979px) {
   #homepage-triple-widget .span4 {
