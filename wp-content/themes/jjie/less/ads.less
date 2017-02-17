@@ -38,6 +38,20 @@
 }
 
 #homepage-triple-widget {
+  .widget {
+    background-color: transparent;
+  }
+  @border: 1px dotted #aaa;
+
+  // this is the inverse of @tabletDown
+  @media only screen and (min-width: 980px) {
+    margin-bottom: 24px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    border-top: @border;
+    border-bottom: @border;
+  }
+
   @media @tabletDown {
     .span4 {
       margin: 0 auto 12px;
@@ -45,6 +59,15 @@
       padding: 0;
       width: 300px;
       float: none;
+      &:first-child {
+        border-top: @border;
+      }
+      & + .span4 {
+        border-top: @border;
+      }
+      &:last-child {
+        border-bottom: @border;
+      }
     }
   }
 }

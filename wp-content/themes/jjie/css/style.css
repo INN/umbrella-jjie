@@ -35,6 +35,18 @@
   padding-right: 0;
   display: inline;
 }
+#homepage-triple-widget .widget {
+  background-color: transparent;
+}
+@media only screen and (min-width: 980px) {
+  #homepage-triple-widget {
+    margin-bottom: 24px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    border-top: 1px dotted #aaaaaa;
+    border-bottom: 1px dotted #aaaaaa;
+  }
+}
 @media only screen and (max-width: 979px) {
   #homepage-triple-widget .span4 {
     margin: 0 auto 12px;
@@ -42,6 +54,15 @@
     padding: 0;
     width: 300px;
     float: none;
+  }
+  #homepage-triple-widget .span4:first-child {
+    border-top: 1px dotted #aaaaaa;
+  }
+  #homepage-triple-widget .span4 + .span4 {
+    border-top: 1px dotted #aaaaaa;
+  }
+  #homepage-triple-widget .span4:last-child {
+    border-bottom: 1px dotted #aaaaaa;
   }
 }
 /* Largo essentials */
