@@ -85,7 +85,7 @@ function wpb_widgets_init() {
 	register_sidebar( array(
 		'name' => __( 'Homepage Middle Ad Zone', 'yt' ),
 		'id' => 'homepage-middle-ad-zone',
-		'description' => __( 'This widget area appears on the homepage, above the Homepage Bottom widget area', 'yt'),
+		'description' => __( 'This widget area appears on the homepage, above the Homepage Bottom widget area, It takes the width of the whole column. The three side-by-side widget areas are named "Homepage Three Ads"', 'yt'),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h3 class="widget-title">',
@@ -93,7 +93,7 @@ function wpb_widgets_init() {
 	) );
 }
 
-add_action( 'widgets_init', 'wpb_widgets_init' );
+add_action( 'widgets_init', 'wpb_widgets_init', 20 );
 
 /**
  * Add .hub class on body for hub pages: the pages that have the Hub as an ancestor
