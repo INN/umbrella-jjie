@@ -167,7 +167,7 @@ function jjie_register_widgets() {
 	register_sidebar( array(
 		'name' => __( 'Homepage Middle Ad Zone', 'yt' ),
 		'id' => 'homepage-middle-ad-zone',
-		'description' => __( 'This widget area appears on the homepage, above the Homepage Bottom widget area, It takes the width of the whole column. The three side-by-side widget areas are named "Homepage Three Ads"', 'yt'),
+		'description' => __( 'This widget area appears on the homepage, above the Homepage Bottom widget area. It takes the width of the whole column. The three side-by-side widget areas are named "Homepage Three Ads" with an indication of which slot they are.', 'yt'),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h3 class="widget-title">',
