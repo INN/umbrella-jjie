@@ -69,6 +69,10 @@
     border-bottom: 1px dotted #aaaaaa;
   }
 }
+#homepage-triple-widget .dfw-unit.display-block:before {
+  display: none;
+  content: '';
+}
 /* Largo essentials */
 article,
 aside,

@@ -3,12 +3,11 @@
   color: #222;
 }
 
-// Remove borders, but not the bottom
 div#homepage-featured {
   border-top: none;
   border-left: none;
   border-right: none;
-  // border-bottom: none; // not removing this because it's used to draw a nice line between featured and not. 
+  border-bottom: none;
 }
 // Making this bigger per YT-28; largo default is 10.67px
 #homepage-featured .sub-stories .story p {
@@ -36,4 +35,9 @@ div#homepage-featured {
 // Increasing vertical spacing between stories on homepage
 #homepage-bottom .largo-recent-posts li+li {
   margin-top: 20px;
+}
+
+#homepage-triple-widget .dfw-unit.display-block:before {
+  display:none;
+  content: '';
 }

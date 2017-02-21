@@ -431,6 +431,7 @@ div#homepage-featured {
   border-top: none;
   border-left: none;
   border-right: none;
+  border-bottom: none;
 }
 #homepage-featured .sub-stories .story p {
   font-size: 13px;
@@ -450,6 +451,10 @@ div#homepage-featured {
 }
 #homepage-bottom .largo-recent-posts li + li {
   margin-top: 20px;
+}
+#homepage-triple-widget .dfw-unit.display-block:before {
+  display: none;
+  content: '';
 }
 /* Now you can add any of your custom styles below this line */
 html,
