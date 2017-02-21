@@ -156,39 +156,3 @@ function largo_dfw_setup() {
 
 }
 add_action('dfw_setup', 'largo_dfw_setup');
-
-/**
- * Register custom sidebars for JJIE
- *
- * @link http://jira.inn.org/browse/YT-90
- * @since Largo 0.5.4
- */
-function jjie_register_widgets() {
-	register_sidebar( array(
-		'name' => __( 'Homepage Middle Ad Zone', 'yt' ),
-		'id' => 'homepage-middle-ad-zone',
-		'description' => __( 'This widget area appears on the homepage, above the Homepage Bottom widget area. It takes the width of the whole column. The three side-by-side widget areas are named "Homepage Three Ads" with an indication of which slot they are.', 'yt'),
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
-	) );
-}
-add_action( 'widgets_init', 'jjie_register_widgets', 20 );
-
-/**
- * Add widget area to the homepage, for an ad widget
- *
- * Depends on Largo PR 966
- *
- * @since Largo 0.5.4
- * @see jjie_register_widgets
- * @link http://jira.inn.org/browse/YT-90
- * @link https://github.com/INN/Largo/pull/966
- */
-function jjie_homepage_middle_ad_widget() {
-	if ( ! dynamic_sidebar( 'homepage-middle-ad-zone' ) ) { ?>
-		<!-- <?php _e('Please add widgets to this content area in the WordPress admin area under appearance > widgets.', 'largo'); ?> -->
-	<?php }
-}
-add_action('largo_before_sticky_posts', 'jjie_homepage_middle_ad_widget');

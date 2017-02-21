@@ -82,15 +82,6 @@ function wpb_widgets_init() {
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
 	) );
-	register_sidebar( array(
-		'name' => __( 'Homepage Middle Ad Zone', 'yt' ),
-		'id' => 'homepage-middle-ad-zone',
-		'description' => __( 'This widget area appears on the homepage, above the Homepage Bottom widget area. It takes the width of the whole column. The three side-by-side widget areas are named "Homepage Three Ads" with an indication of which slot they are.', 'yt'),
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
-	) );
 }
 
 add_action( 'widgets_init', 'wpb_widgets_init', 20 );
@@ -144,19 +135,3 @@ function yt_add_homepage_large_image_prominence($termsDefinitions) {
 	return $termsDefinitions;
 }
 add_filter('largo_prominence_terms', 'yt_add_homepage_large_image_prominence', 0);
-
-/**
- * Add widget area to the homepage, for an ad widget
- *
- * Depends on Largo PR 966
- *
- * @see wpb_widgets_init
- * @link http://jira.inn.org/browse/HELPDESK-438
- * @link https://github.com/INN/Largo/pull/966
- */
-function yt_homepage_middle_ad_widget() {
-	if ( ! dynamic_sidebar( 'homepage-middle-ad-zone' ) ) { ?>
-		<!-- <?php _e('Please add widgets to this content area in the WordPress admin area under appearance > widgets.', 'largo'); ?> -->
-	<?php }
-}
-add_action('largo_before_sticky_posts', 'yt_homepage_middle_ad_widget');

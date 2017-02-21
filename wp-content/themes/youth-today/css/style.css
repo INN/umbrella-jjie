@@ -451,10 +451,6 @@ div#homepage-featured {
 #homepage-bottom .largo-recent-posts li + li {
   margin-top: 20px;
 }
-.home #content > .widget {
-  padding-bottom: 34px;
-  border-bottom: 5px solid #dddddd;
-}
 /* Now you can add any of your custom styles below this line */
 html,
 body {
