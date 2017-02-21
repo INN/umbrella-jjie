@@ -15,7 +15,7 @@ function jjie_homepage_triple_widget_area() {
 		</div>
 	<?php
 }
-add_action( 'largo_after_sticky_posts', 'jjie_homepage_triple_widget_area', 100 );
+add_action( 'largo_before_sticky_posts', 'jjie_homepage_triple_widget_area', 100 );
 
 /**
  * Register the three widget areas output by jjie_homepage_triple_widget_area
