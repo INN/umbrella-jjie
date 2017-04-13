@@ -316,7 +316,7 @@ li.second-level a:hover {
   vertical-align: middle;
 }
 #header-ad-zone-container aside {
-  padding-right: 0;
+  padding: 0;
   display: inline;
 }
 @media (max-width: 1200px) {
