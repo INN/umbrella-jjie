@@ -33,8 +33,6 @@ if ( $query->have_posts() ) {
 
 			<div class="sticky-solo">
 
-				<h5 class="top-tag"><?php _e('Sponsored Content', 'yt'); ?></h5>
-
 				<div class="sticky-main-feature row-fluid">
 
 
