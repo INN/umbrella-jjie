@@ -23,5 +23,3 @@
 		<?php the_content(); ?>
 	</section><!-- .entry-content -->
 </article><!-- #post-<?php the_ID(); ?> -->
-
-<?php get_template_part('partials/after-page-content', '103871');
