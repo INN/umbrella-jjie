@@ -134,25 +134,3 @@ function jjie_add_homepage_large_image_prominence($termsDefinitions) {
 	return $termsDefinitions;
 }
 add_filter('largo_prominence_terms', 'jjie_add_homepage_large_image_prominence', 0);
-
-/**
- * DoubleClick for WordPress setup for JJIE
- * Valid as of 2016-03-09
- *
- * @since Largo 0.5.4
- * @since Doubleclick for Wordpress 0.2
- * @link http://jira.inn.org/browse/YT-90
- */
-function largo_dfw_setup() {
-
-	global $DoubleClick;
-
-	$DoubleClick->networkCode = "81321119";
-
-	/* breakpoints */
-	$DoubleClick->register_breakpoint('phone', array('minWidth'=>0,'maxWidth'=>769));
-	$DoubleClick->register_breakpoint('tablet', array('minWidth'=>769,'maxWidth'=>980));
-	$DoubleClick->register_breakpoint('desktop', array('minWidth'=>980,'maxWidth'=>9999));
-
-}
-add_action('dfw_setup', 'largo_dfw_setup');
