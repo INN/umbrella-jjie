@@ -23,26 +23,6 @@ function largo_child_require_files() {
 add_action( 'after_setup_theme', 'largo_child_require_files' );
 
 /**
- * DoubleClick for WordPress setup for YT
- * Valid as of 2015-08-18
- *
- * @since Largo 0.5.2
- */
-function largo_dfw_setup() {
-
-    global $DoubleClick;
-
-    $DoubleClick->networkCode = "81321119";
-
-    /* breakpoints */
-    $DoubleClick->register_breakpoint('phone', array('minWidth'=>0,'maxWidth'=>769));
-    $DoubleClick->register_breakpoint('tablet', array('minWidth'=>769,'maxWidth'=>980));
-    $DoubleClick->register_breakpoint('desktop', array('minWidth'=>980,'maxWidth'=>9999));
-
-}
-add_action('dfw_setup', 'largo_dfw_setup');
-
-/**
  * Creates menus for hub pages
  *
  * hub-sidebar: the
