@@ -34,14 +34,15 @@ add_action( 'after_setup_theme', 'largo_child_require_files' );
 
 
 /**
- * Use this function to check if child of '/hub/' page => '103871'
- * @param str The ID of the page we're looking for 
+ * Use this function to check if the present post/page is a child of '/hub/' page => '103871'
+ * @param str The ID of the page that is the Hub
+ * @return Boolean
  */
-function is_hub( $pid) { // $pid = The ID of the page we're looking for pages underneath
+function is_hub( $pid ) { // $pid = The ID of the page we're looking for pages underneath
 	global $post; // load details about this page
 
 	// Return true if this page is the specified page
-	if ( is_page($pid) )
+	if ( is_page( $pid ) )
 		return true; // we're at the page or at a sub page
 
 	$anc = get_post_ancestors( $post->ID );
@@ -54,17 +55,58 @@ function is_hub( $pid) { // $pid = The ID of the page we're looking for pages un
 	return false; // we aren't at the page, and the page is not an ancestor
 }
 
-function tabbed_func( $atts, $content = null ) {
-	extract( shortcode_atts( array(
-		'title' => 'something'
-	), $atts ) );
-
-	return "<div class='tabby open'><h5>". $title ."</h5><div class='content'><p>". $content . "</div></div>";
+/**
+ * Register the scripts for the [tab] shortcode
+ */
+function jjie_tabbed_shortcode_scripts_enqueue() {
+	wp_register_script(
+		'jjie-hub-tab',
+		get_stylesheet_directory_uri() . '/js/jquery.ba-bbq.min.js',
+		array( 'jquery' ),
+		null,
+		true
+	);
+	wp_register_script(
+		'jjie-hub',
+		get_stylesheet_directory_uri() . '/js/hub.js',
+		array( 'jquery' ),
+		null,
+		true
+	);
 }
-add_shortcode('tab', 'tabbed_func');
 
+/**
+ * The "tab" shortcode
+ *
+ * Enqueues its own necessary scripts.
+ *
+ * @param array $atts The shortcode attributes
+ * @param String $content The text wrapped by the shortcode
+ * @param String $shortcode_tag
+ * @return String
+ */
+function tabbed_func( $atts, $content = null, $shortcode_tag = null ) {
+	$atts = shortcode_atts( array(
+		'title' => 'Title'
+	), $atts );
+
+	wp_enqueue_script( 'jjie-hub-tab' );
+	wp_enqueue_script( 'jjie-hub' );
+
+	return sprintf(
+		'<div class="tabby open"><h5>%1$s</h5><div class="content">%2$s</div></div>',
+		wp_kses_post( $atts['title'] ),
+		wp_kses_post( $atts['content'] )
+	);
+}
+add_shortcode( 'tab', 'tabbed_func' );
+
+/**
+ * This should only run on hub pages, but instead it runs on all pages
+ * @uses is_hub
+ */
 function jjie_sidebox() {
-	if(is_hub('103871')) {
+	if( is_hub( '103871' ) ) {
 		if (! function_exists('get_field') ) {
 			echo '<!-- get_field is not defined, so the sidebox will not appear. -->';
 			return false;
@@ -95,8 +137,10 @@ add_action('largo_before_sidebar_content', 'jjie_sidebox');
 
 /**
  * add 'hub' class to hub pages
+ * @uses is_hub
  */
 function jjie_hub_body_class( $classes ) {
+	global $post;
 	if ( is_hub( '103871' ) ) {
 		$classes[] = 'hub';
 	}
